@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center_horizontal|center_vertical">
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="main" type="captain.wonjong.smsmanager.MainActivity"/>
+    </data>
 
-    <TextView
-        android:text="APP SMS TOKEN GENERATED"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"/>
+    <LinearLayout
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/my_margin"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_token"
-        android:layout_marginTop="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:textColor="@android:color/holo_red_dark"/>
+        <Button
+            android:id="@+id/btn_send_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send OTP">
+        </Button>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_token"
+            android:text="Generated token ID : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_margin"
+            android:layout_gravity="left"
+            android:textColor="@android:color/black">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_input_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_margin">
+        </EditText>
+    </LinearLayout>
+</layout>
