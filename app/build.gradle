@@ -19,7 +19,7 @@ android {
         enabled = true
     }
 
-    flavorDimensions("wongjong")
+    flavorDimensions("wonjong")
     productFlavors {
         min15 {
             minSdkVersion 15
